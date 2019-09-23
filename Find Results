@@ -1,0 +1,86 @@
+Searching 24437 files for "App\User"
+
+/Users/mac/Documents/larabbs/_ide_helper.php:
+ 1771           * Get the currently authenticated user.
+ 1772           *
+ 1773:          * @return \App\User|null 
+ 1774           * @static 
+ 1775           */ 
+ ....
+ 1809           *
+ 1810           * @param mixed $id
+ 1811:          * @return \App\User|false 
+ 1812           * @static 
+ 1813           */ 
+ ....
+ 1878           * @param mixed $id
+ 1879           * @param bool $remember
+ 1880:          * @return \App\User|false 
+ 1881           * @static 
+ 1882           */ 
+ ....
+ 1945           * Get the last user we attempted to authenticate.
+ 1946           *
+ 1947:          * @return \App\User 
+ 1948           * @static 
+ 1949           */ 
+ ....
+ 2056           * Return the currently cached user.
+ 2057           *
+ 2058:          * @return \App\User|null 
+ 2059           * @static 
+ 2060           */ 
+ ....
+ 2106           * Determine if current user is authenticated. If not, throw an exception.
+ 2107           *
+ 2108:          * @return \App\User 
+ 2109           * @throws \Illuminate\Auth\AuthenticationException
+ 2110           * @static 
+
+/Users/mac/Documents/larabbs/app/Http/Controllers/Auth/RegisterController.php:
+    3  namespace App\Http\Controllers\Auth;
+    4  
+    5: use App\User;
+    6  use App\Http\Controllers\Controller;
+    7  use Illuminate\Support\Facades\Hash;
+    .
+   60       *
+   61       * @param  array  $data
+   62:      * @return \App\User
+   63       */
+   64      protected function create(array $data)
+
+/Users/mac/Documents/larabbs/config/auth.php:
+   68          'users' => [
+   69              'driver' => 'eloquent',
+   70:             'model' => App\User::class,
+   71          ],
+   72  
+
+/Users/mac/Documents/larabbs/config/services.php:
+   32  
+   33      'stripe' => [
+   34:         'model' => App\User::class,
+   35          'key' => env('STRIPE_KEY'),
+   36          'secret' => env('STRIPE_SECRET'),
+
+/Users/mac/Documents/larabbs/database/factories/UserFactory.php:
+   15  */
+   16  
+   17: $factory->define(App\User::class, function (Faker $faker) {
+   18      return [
+   19          'name' => $faker->name,
+
+/Users/mac/Documents/larabbs/vendor/barryvdh/laravel-ide-helper/src/Generator.php:
+  119      protected function detectDrivers()
+  120      {
+  121:         $defaultUserModel = config('auth.providers.users.model', config('auth.model', 'App\User'));
+  122          $this->interfaces['\Illuminate\Contracts\Auth\Authenticatable'] = $defaultUserModel;
+  123  
+
+12 matches across 6 files
+
+
+Searching 24437 files for "App\User"
+
+0 matches
