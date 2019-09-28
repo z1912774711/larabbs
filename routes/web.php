@@ -43,3 +43,6 @@ Route::resource('users','UsersController',['only'=>['show','update','edit']]);
 //Route::patch('/user/{user}','UsersController@update')->name('update');
 
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+//分类列表话题路由
+Route::resource('categories', 'CategoriesController', ['only' => ['show']]);

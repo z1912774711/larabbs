@@ -19,7 +19,8 @@
               <span class="badge badge-secondary badge-pill"> {{ $topic->reply_count }} </span>
             </a> </div>
           <small class="media-body meta text-secondary">
-            <a class="text-secondary" href="#" title="{{ $topic->category->name }}">
+{{--            <a class="text-secondary" href="#" title="{{ $topic->category->name }}">--}}
+            <a class="text-secondary" href="{{ route('categories.show',$topic->category_id) }}" title="{{ $topic->category->name }}" >
               <i class="far fa-folder"></i>
               {{ $topic->category->name }}
             </a>
