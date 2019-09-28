@@ -19,7 +19,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li> @else
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                <img src="http://www.gravatar.com/avatar/ab2aa0449e908991c43e29ac2e406742?s=30">
+                <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle" width="30px" height="30px">
                         {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
