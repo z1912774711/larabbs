@@ -25,7 +25,7 @@ class UsersController extends Controller
 
         //如果数据中包含avatar字段，则调用图片的封装函数
         if($request->avatar){
-            $result = $uploader->save($request->avatar,'avatars',$user->id);
+            $result = $uploader->save($request->avatar,'avatars',$user->id,416);
             if($result){
                 $data['avatar'] = $result['path'];
             }
