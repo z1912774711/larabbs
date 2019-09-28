@@ -41,3 +41,5 @@ Route::resource('users','UsersController',['only'=>['show','update','edit']]);
 //Route::get('/user/{user}','UsersController@show')->name('show');
 //Route::get('/user/{user}','UsersController@edit')->name('edit');
 //Route::patch('/user/{user}','UsersController@update')->name('update');
+
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
