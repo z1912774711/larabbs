@@ -35,3 +35,9 @@ Route::get('email/verify', 'Auth\VerificationController@show')->name('verificati
 Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
 Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
+//用户个人中心
+Route::resource('users','UsersController',['only'=>['show','update','edit']]);
+//上述代码等同于
+//Route::get('/user/{user}','UsersController@show')->name('show');
+//Route::get('/user/{user}','UsersController@edit')->name('edit');
+//Route::patch('/user/{user}','UsersController@update')->name('update');
