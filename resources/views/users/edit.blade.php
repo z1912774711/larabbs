@@ -28,13 +28,14 @@
                         <div class="form-group mb-4">
                             <label for="" class="avatar-label">用户头像</label>
                             <input type="file" name="avatar" class="form-control-file">
-                            @if($user->avatar)
-                                <br>
-                                <img class="thumbnail img-responsive" src="{{ $user->avatar }}" width="200" />
-                            @endif
+{{--                            @if($user->avatar)--}}
+{{--                                <br>--}}
+{{--                                <img class="thumbnail img-responsive" src="{{ $user->avatar }}" width="200" />--}}
+{{--                            @endif--}}
                         </div>
                         <div class="well well-sm">
-                            <button type="submit" class="btn btn-primary">保存</button> </div>
+                            <button type="submit" class="btn btn-primary">保存</button>
+                        </div>
                     </form>
                 </div>
             </div>
